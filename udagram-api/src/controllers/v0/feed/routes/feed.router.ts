@@ -2,7 +2,7 @@ import {Router, Request, Response} from 'express';
 import {FeedItem} from '../models/FeedItem';
 import {NextFunction} from 'connect';
 import * as jwt from 'jsonwebtoken';
-// import * as AWS from '../../../../aws';
+import * as AWS from '../../../../aws';
 import * as c from '../../../../config/config';
 
 const router: Router = Router();
@@ -31,7 +31,7 @@ router.get('/', async (req: Request, res: Response) => {
   const items = await FeedItem.findAndCountAll({order: [['id', 'DESC']]});
   items.rows.map((item) => {
     if (item.url) {
-      // item.url = AWS.getGetSignedUrl(item.url);
+      item.url = AWS.getGetSignedUrl(item.url);
     }
   });
   res.send(items);
@@ -50,7 +50,7 @@ router.get('/signed-url/:fileName',
     requireAuth,
     async (req: Request, res: Response) => {
       const {fileName} = req.params;
-      // const url = AWS.getPutSignedUrl(fileName);
+      const url = AWS.getPutSignedUrl(fileName);
       res.status(201).send({url: url});
     });
 
@@ -76,7 +76,7 @@ router.post('/',
 
       const savedItem = await item.save();
 
-      // savedItem.url = AWS.getGetSignedUrl(savedItem.url);
+      savedItem.url = AWS.getGetSignedUrl(savedItem.url);
       res.status(201).send(savedItem);
     });
 
