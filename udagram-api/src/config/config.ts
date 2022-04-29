@@ -16,7 +16,7 @@ export const config = {
   dialect: "postgres",
   awsRegion: process.env.AWS_REGION,
   awsProfile: process.env.AWS_PROFILE,
-  awsMediaBucket: process.env.AWS_BUCKET,
+  // awsMediaBucket: process.env.AWS_BUCKET,
   url: process.env.URL,
   jwt: {
     secret: process.env.JWT_SECRET,
