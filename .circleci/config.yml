@@ -31,14 +31,14 @@ jobs:
           command: |
             npm run backend:build
       - run:
-          name: test App Front-End
+          name: Front-End Test
           command: |
             npm run frontend:test
       - run:
-          name: Deploy App Front-End
+          name: Front-End Deploy
           command: |
             npm run frontend:deploy
       - run:
-          name: Deploy App Back-End
+          name: Back-End Deploy
           command: |
             npm run backend:deploy

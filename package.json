@@ -1,13 +1,13 @@
 {
     "scripts": {
-        "frontend:install": "cd udagram-frontend && yarn install",
-        "backend:install": "cd udagram-api && yarn install",
-        "backend:build": "cd udagram-api && yarn build",
-        "frontend:build": "cd udagram-frontend && yarn build",
-        "frontend:deploy": "cd udagram-frontend && yarn deploy",
-        "backend:deploy": "cd udagram-api && yarn deploy",
-        "backend:run": "cd udagram-api && yarn start",
-        "frontend:test": "cd udagram-frontend && yarn test"
+        "frontend:install": "cd udagram-frontend && npm run install --legacy-peer-deps ",
+        "backend:install": "cd udagram-api && npm run install",
+        "backend:build": "cd udagram-api && npm run build",
+        "frontend:build": "cd udagram-frontend && npm run build",
+        "frontend:deploy": "cd udagram-frontend && npm run deploy",
+        "backend:deploy": "cd udagram-api && npm run deploy",
+        "backend:run": "cd udagram-api && npm run start",
+        "frontend:test": "cd udagram-frontend && npm run test"
     },
     "devDependencies": {}
 }
