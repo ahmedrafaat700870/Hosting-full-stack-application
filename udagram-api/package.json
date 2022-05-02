@@ -4,7 +4,8 @@
   "description": "",
   "main": "www/server.js",
   "scripts": {
-    "start": "node .",
+    "start": "nodemon server.js",
+    "test-runing": "yarn tsc && cd www && yarn start",
     "tsc": "tsc",
     "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
     "prod": "tsc && node ./www/server.ts",
@@ -27,6 +28,7 @@
     "email-validator": "^2.0.4",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.16",
     "pg": "^8.7.1",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^5.21.4",
