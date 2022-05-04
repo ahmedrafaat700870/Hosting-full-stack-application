@@ -12,6 +12,7 @@
     "clean": "rm -rf www/ || true",
     "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
     "deploy": "eb use udagram-api-dev && eb deploy udagram-api-dev",
+    "sitenv": " eb setenv POSTGRES_USERNAME=$POSTGRES_USERNAME && eb setenv POSTGRES_PASSWORD=$POSTGRES_PASSWORD && eb setenv POSTGRES_DB=$POSTGRES_DB && eb setenv PORT=$PORT && eb setenv DBPORT=$DBPORT && eb setenv POSTGRES_HOST=$POSTGRES_HOST &&eb setenv URL=$URL",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

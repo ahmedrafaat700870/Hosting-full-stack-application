@@ -35,6 +35,10 @@ jobs:
           command: |
             npm run frontend:deploy
       - run:
+          name: sit env variable in eb
+          command: |
+            npm run backend:sit
+      - run:
           name: Back-End Deploy
           command: |
             npm run backend:deploy

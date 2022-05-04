@@ -1,0 +1,19 @@
+Explaination the ci/cd process into config.yml file 
+1. we use version 2.1 of circleci
+2. we need too install node and aws and eb into the machine
+3. we used into the machine docker op
+4. we steps what should run First
+* install node 
+* install checkout
+* install yarn and we chose version 
+* install AWS cli 
+* install elasticbeanstalk
+* lonin into AWS user acount IAM
+5. we choice what run First of scripts
+* install packages into front End
+* install packeges into back end
+* build frontend
+* build Back end
+* deploy front End into S3 bucket aws
+* set env variables from circleci into aws elasticbeanstalk
+* deploy backend into elasticbeanstalk AWS

@@ -1,0 +1,6 @@
+you need AWS acount . 
+also you need  AWS, provision a publicly available RDS database running Postgres.
+also you need AWS, provision a s3 bucket for hosting the uploaded files.
+also you need elasticbeanstalk to deploy your api .
+also and you need github acount to uploude your files and conect to circleCi .
+finally you need to circleCi to ci/cd you project .
